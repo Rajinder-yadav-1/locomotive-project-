@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "freight big pro ";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    background-color: black;
+}
+
+.loader {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 99;
+    /* display: none; */
+}
+
+.loader h1 {
+    font-size: 6.9vw;
+    font-weight: 100;
+    line-height: 5vw;
+    position: relative;
+    z-index: 9;
+    letter-spacing: -3px;
+}
+
+.loader video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 6;
+}
+
+.yellow1 {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: #FFD700;
+    z-index: 8;
+}
+
+.yellow2 {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: #FFD700;
+    z-index: 7;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 10;
+}
+
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.page1 h1 {
+    font-size: 6.9vw;
+    font-weight: 100;
+    line-height: 5vw;
+    letter-spacing: -3px;
+
+
+}
+
+.page2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.elem {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.elem .blur {
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #ffd900e5, #FFD700, #ffd900dc);
+    box-shadow: 10px 0px 20px 20px #FFD700, -10px 0px 20px 100px #FFD700;
+    height: 100%;
+    z-index: 8;
+}
+
+.elem h2 {
+    font-size: 6.3vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 5vw;
+    position: relative;
+    z-index: 9;
+}
+
+
+.elem .moving {
+    background-color: #FFD700;
+    width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    transform: translate(0, -45%) scaleY(0);
+    padding: 8px 0;
+    transition: all ease 0.3s;
+}
+
+.elem .moving .moving-in {
+    white-space: nowrap;
+    display: inline-block;
+    animation: moving 5s infinite linear;
+
+}
+
+.elem .moving .moving-in h5 {
+    display: inline-block;
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: gilroy;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+    opacity: 0;
+    text-transform: uppercase;
+    margin-right: 35px;
+
+}
+
+
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .moving {
+    transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving h5 {
+    opacity: 1;
+}
+
+.elem:hover h2 {
+    font-style: italic;
+}
+
+.page3 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.image-container {
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+} 
+
+.image-div {
+    height: 40vw;
+    width: 30vw;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 20px;
+
+}
+
+.image-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.158);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all ease 0.5s;
+    z-index: 10;
+
+}
+
+.overlay p {
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 2.5vw;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+    opacity: 0;
+
+}
+
+.image-div:hover .overlay {
+    background-color: #000000;
+
+}
+
+.image-div:hover .overlay p {
+    opacity: 1;
+}
+
+.image-div:hover img{
+    scale: 1.1;
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer .foot{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.foot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.foot h2{
+    color: white;
+    font-size: 2vw;
+    
+}
+
+.foot h2 i{
+    color: yellow;
+}
+
+.foot h4 a{
+    color:yellow;
+   text-decoration: wavy;
+   font-size: 2vw;
+   transition: text-shadow 0.5s ease-in-out;
+}
+
+.foot h4 a:hover {
+    color: yellow;
+    text-decoration: wavy;
+    font-size: 2vw;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+  }
+
+.foot h4{
+    color: white;
+ position: absolute;
+ bottom: 30px;
+ font-size: 1vw;
+}
+
+
+.footer h2{
+    font-family: sans-serif;
+text-transform: uppercase;
+font-size: 1.5vw;
+
+}
