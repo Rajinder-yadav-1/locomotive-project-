@@ -280,6 +280,10 @@ display: flex;
 
 }
 
+.footer h2{
+    cursor: pointer;
+}
+
 .foot{
     display: flex;
     align-items: center;
